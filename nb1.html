@@ -1877,53 +1877,6 @@ Data Analysis Project            </a>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="creating-the-directory-structure">Creating the directory structure</h3>
 </div>
-<div class="cell border-box-sizing code_cell vbox">
-<div class="input hbox">
-<div class="prompt input_prompt">
-In&nbsp;[2]:
-</div>
-<div class="input_area box-flex1">
-<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">bash</span>
-<span class="n">mkdir</span> <span class="o">../</span><span class="n">script</span> <span class="o">../</span><span class="n">data</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">raw</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">cleaned</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">simulated</span> <span class="o">../</span><span class="n">visualizations</span>
-<span class="n">ls</span> <span class="o">-</span><span class="n">r</span>
-</pre></div>
-
-</div>
-</div>
-
-<div class="vbox output_wrapper">
-<div class="output vbox">
-
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stdout">
-<pre>
-visualizations
-script
-README.md
-NB4_project_report.ipynb
-NB3_data_analysis.ipynb
-NB2_data_cleaning.ipynb
-NB1_data_gathering.ipynb
-data
-
-</pre>
-</div>
-</div>
-
-<div class="hbox output_area"><div class="prompt"></div>
-<div class="box-flex1 output_subarea output_stream output_stderr">
-<pre>
-mkdir: cannot create directory ‘../data’: File exists
-
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Downloading-and-displaying-raw-data">Downloading and displaying raw data<a class="anchor-link" href="#Downloading-and-displaying-raw-data">&#182;</a></h3>
 </div>
@@ -1934,7 +1887,7 @@ mkdir: cannot create directory ‘../data’: File exists
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
-In&nbsp;[4]:
+In&nbsp;[2]:
 </div>
 <div class="input_area box-flex1">
 <div class="highlight-ipynb"><pre class="ipynb"><span class="o">%</span><span class="k">load_ext</span> <span class="n">rmagic</span>
@@ -2306,6 +2259,375 @@ In&nbsp;[16]:
 </div>
 </div>
 
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Data-Gathering-(OUR-STUFF-STARTS-HERE)">Data Gathering (OUR STUFF STARTS HERE)<a class="anchor-link" href="#Data-Gathering-(OUR-STUFF-STARTS-HERE)">&#182;</a></h1>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-Directory-Structure">Creating Directory Structure<a class="anchor-link" href="#Creating-Directory-Structure">&#182;</a></h3>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[6]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">bash</span>
+<span class="n">mkdir</span> <span class="o">../</span><span class="n">script</span> <span class="o">../</span><span class="n">data</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">raw</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">cleaned</span> <span class="o">../</span><span class="n">data</span><span class="o">/</span><span class="n">simulated</span> <span class="o">../</span><span class="n">visualizations</span>
+<span class="n">ls</span> <span class="o">-</span><span class="n">r</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+README.md
+NB4_project_report.ipynb
+NB3_data_analysis.ipynb
+NB2_data_cleaning.ipynb
+NB1_data_gathering.ipynb
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Description-of-the-Data">Description of the Data<a class="anchor-link" href="#Description-of-the-Data">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We pulled flight data from 1987 to 2008 from http://stat-computing.org/dataexpo/2009/the-data.html, downloading all 20 years. The data came in archived/compressed .csv files (comma-separated variables).</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The files contain data on domestic US flights from 1987 to 2008. The data from all years combined consist of over 100 million rows and 29 columns. Each row represents a flight. The columns include (but are not limited to) the following information:</p>
+<ul>
+<li>Year</li>
+<li>Month</li>
+<li>Day of Month</li>
+<li>Day of Week</li>
+<li>Scheduled Departure Time</li>
+<li>Actual Departure Time</li>
+<li>Scheduled Arrival Time</li>
+<li>Actual Arrival Time</li>
+<li>Scheduled Flight Time</li>
+<li>Actual Flight Time</li>
+<li>Departure Delay</li>
+<li>Arrival Delay</li>
+<li>Airport of Origin</li>
+<li>Destination Airport</li>
+<li>Flight Distance</li>
+<li>Flight Number</li>
+</ul>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Downloading-the-Data">Downloading the Data<a class="anchor-link" href="#Downloading-the-Data">&#182;</a></h3>
+</div>
+
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[69]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="o">%%</span><span class="k">bash</span>
+<span class="c">#note: don&#39;t run this stuff unless you&#39;re really sure, the files are large</span>
+
+<span class="c">#cd ../data/raw</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1987.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1988.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1989.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1990.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1991.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1992.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1993.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1994.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1995.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1996.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1997.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1998.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/1999.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2000.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2001.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2002.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2003.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2004.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2005.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2006.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2007.csv.bz2</span>
+<span class="c">#wget http://stat-computing.org/dataexpo/2009/2008.csv.bz2</span>
+<span class="c">#bunzip2 1987.csv.bz2</span>
+<span class="c">#bunzip2 1988.csv.bz2</span>
+<span class="c">#bunzip2 1989.csv.bz2</span>
+<span class="c">#bunzip2 1990.csv.bz2</span>
+<span class="c">#bunzip2 1991.csv.bz2</span>
+<span class="c">#bunzip2 1992.csv.bz2</span>
+<span class="c">#bunzip2 1993.csv.bz2</span>
+<span class="c">#bunzip2 1994.csv.bz2</span>
+<span class="c">#bunzip2 1995.csv.bz2</span>
+<span class="c">#bunzip2 1996.csv.bz2</span>
+<span class="c">#bunzip2 1997.csv.bz2</span>
+<span class="c">#bunzip2 1998.csv.bz2</span>
+<span class="c">#bunzip2 1999.csv.bz2</span>
+<span class="c">#bunzip2 2000.csv.bz2</span>
+<span class="c">#bunzip2 2001.csv.bz2</span>
+<span class="c">#bunzip2 2002.csv.bz2</span>
+<span class="c">#bunzip2 2003.csv.bz2</span>
+<span class="c">#bunzip2 2004.csv.bz2</span>
+<span class="c">#bunzip2 2005.csv.bz2</span>
+<span class="c">#bunzip2 2006.csv.bz2</span>
+<span class="c">#bunzip2 2007.csv.bz2</span>
+<span class="c">#bunzip2 2008.csv.bz2</span>
+<span class="c">#sqlite3 ontime.sqlite3</span>
+<span class="c">#create table ontime (Year int, Month int, DayofMonth int, DayOfWeek int, DepTime int, CRSDepTime int, ArrTime int, CRSArrTime int, UniqueCarrier varchar(5), FlightNum int, TailNum varchar(8), ActualElapsedTime int, CRSElapsedTime int, AirTime int, ArrDelay int, DepDelay int, Origin varchar(3), Dest varchar(3), Distance int, TaxiIn int, TaxiOut int, Cancelled int, CancellationCode varchar(1), Diverted varchar(1), CarrierDelay int, WeatherDelay int, NASDelay int, SecurityDelay int, LateAircraftDelay int);</span>
+<span class="c">#.separator ,</span>
+<span class="c">#.import 2008.csv</span>
+<span class="c">#.import 2007.csv</span>
+<span class="c">#.import 2006.csv</span>
+<span class="c">#.import 2005.csv</span>
+<span class="c">#.import 2004.csv</span>
+<span class="c">#.import 2003.csv</span>
+<span class="c">#.import 2002.csv</span>
+<span class="c">#.import 2001.csv</span>
+<span class="c">#.import 2000.csv</span>
+<span class="c">#.import 1999.csv</span>
+<span class="c">#.import 1998.csv</span>
+<span class="c">#.import 1997.csv</span>
+<span class="c">#.import 1996.csv</span>
+<span class="c">#.import 1995.csv</span>
+<span class="c">#.import 1994.csv</span>
+<span class="c">#.import 1993.csv</span>
+<span class="c">#.import 1992.csv</span>
+<span class="c">#.import 1991.csv</span>
+<span class="c">#.import 1990.csv</span>
+<span class="c">#.import 1989.csv</span>
+<span class="c">#.import 1988.csv</span>
+<span class="c">#.import 1987.csv</span>
+<span class="c">#delete from ontime where typeof(year) == &quot;text&quot;;</span>
+<span class="c">#create index year on ontime(year);</span>
+<span class="c">#create index origin on ontime(origin);</span>
+<span class="c">#create index uniquecarrier on ontime(uniquecarrier);</span>
+<span class="c">#create index month on ontime(month);</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Creating-the-Database">Creating the Database<a class="anchor-link" href="#Creating-the-Database">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Due to the large size of the raw data, we could not work with it directly in iPython Notebook. Instead, we turned to SQLite to construct an SQL database.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Start sqlite3, create database</strong> <br>$ sqlite3 ontime.sqlite3</p>
+<p><br> <strong>Create table</strong> <br>sqlite&gt; create table ontime ( <br> ...&gt; Year int, <br> ...&gt; Month int, <br> ...&gt; DayofMonth int, <br> ...&gt; DayOfWeek int, <br> ...&gt; DepTime int, <br> ...&gt; CRSDepTime int, <br> ...&gt; ArrTime int, <br> ...&gt; CRSArrTime int, <br> ...&gt; UniqueCarrier varchar(5), <br> ...&gt; FlightNum int, <br> ...&gt; TailNum varchar(8), <br> ...&gt; ActualElapsedTime int, <br> ...&gt; CRSElapsedTime int, <br> ...&gt; AirTime int, <br> ...&gt; ArrDelay int, <br> ...&gt; DepDelay int, <br> ...&gt; Origin varchar(3), <br> ...&gt; Dest varchar(3), <br> ...&gt; Distance int, <br> ...&gt; TaxiIn int, <br> ...&gt; TaxiOut int, <br> ...&gt; Cancelled int, <br> ...&gt; CancellationCode varchar(1), <br> ...&gt; Diverted varchar(1), <br> ...&gt; CarrierDelay int, <br> ...&gt; WeatherDelay int, <br> ...&gt; NASDelay int, <br> ...&gt; SecurityDelay int, <br> ...&gt; LateAircraftDelay int <br> ...&gt; );</p>
+<p><br> <strong>Import the data from .csv</strong> <br>sqlite&gt; .separator , <br>sqlite&gt; .import 2008.csv ontime <br>sqlite&gt; .import 2007.csv ontime <br>sqlite&gt; .import 2006.csv ontime <br>sqlite&gt; .import 2005.csv ontime <br>etc...</p>
+<p><br> <strong>Remove imported header rows</strong> <br>sqlite&gt; delete from ontime where typeof(year) == &quot;text&quot;;</p>
+<p><br> <strong>Add some indices for convenience later</strong> <br>sqlite&gt; create index year on ontime(year); <br>sqlite&gt; create index origin on ontime(origin); <br>sqlite&gt; create index uniquecarrier on ontime(uniquecarrier); <br>sqlite&gt; create index month on ontime(month);</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we have a database with the relevant raw flight data we downloaded. We can now access the data in iPython Notebook via Python commands, using the sqlite3 package.</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Narrowing-it-Down">Narrowing it Down<a class="anchor-link" href="#Narrowing-it-Down">&#182;</a></h3>
+</div>
+
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We don't want to look at all of the data, since it's not all relevant to our interests. We will narrow it down to fit the scope of our investigation. First of all, we are interested in classifying flights by their airport of origin. And we will look at the 20 airports with the most originating flights. So we produce a list of those airports as follows:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[43]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">sqlite3</span><span class="o">,</span> <span class="nn">csv</span>
+<span class="n">database</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s">&#39;../data/raw/ontime.sqlite3&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[48]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">cur</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT DISTINCT Origin FROM ontime&#39;</span><span class="p">)</span>
+<span class="n">airports</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">flights</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">airports</span><span class="p">:</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT Count(*) FROM ontime WHERE (Origin = ?)&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">flights</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">airport_flights</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">flight</span><span class="p">:</span> <span class="n">flight</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[49]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">top_airports</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">flight_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="n">top_airports</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">airport_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">flight_total</span> <span class="o">+=</span> <span class="n">airport_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">top_airports</span>
+<span class="k">print</span> <span class="n">flight_total</span>
+
+<span class="k">print</span> <span class="n">airport_flights</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">airport_flights</span><span class="p">[</span><span class="mi">19</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[u&apos;ORD&apos;, u&apos;ATL&apos;, u&apos;DFW&apos;, u&apos;LAX&apos;, u&apos;PHX&apos;, u&apos;DEN&apos;, u&apos;DTW&apos;, u&apos;IAH&apos;, u&apos;MSP&apos;, u&apos;SFO&apos;, u&apos;STL&apos;, u&apos;EWR&apos;, u&apos;LAS&apos;, u&apos;CLT&apos;, u&apos;LGA&apos;, u&apos;BOS&apos;, u&apos;PHL&apos;, u&apos;PIT&apos;, u&apos;SLC&apos;, u&apos;SEA&apos;]
+64067176
+6597442
+1984077
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Above, you see a list of the top 20 airports, and the total number of flights that originate from those airports. These represent just over half of the total flights from 1987-2008.</p>
+<p>We'll also look at the top 5 airlines:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[46]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">cur</span> <span class="o">=</span> <span class="n">database</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
+<span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT DISTINCT UniqueCarrier FROM ontime&#39;</span><span class="p">)</span>
+<span class="n">airlines</span> <span class="o">=</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
+<span class="n">flights</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">airlines</span><span class="p">:</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT Count(*) FROM ontime WHERE (UniqueCarrier = ?)&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+    <span class="n">flights</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">cur</span><span class="o">.</span><span class="n">fetchone</span><span class="p">()[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="n">airline_flights</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">flights</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">flight</span><span class="p">:</span> <span class="n">flight</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[53]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">top_airlines</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">flight_total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="n">top_airlines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">airline_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">flight_total</span> <span class="o">+=</span> <span class="n">airline_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span> <span class="n">top_airlines</span>
+<span class="k">print</span> <span class="n">flight_total</span>
+</pre></div>
+
+</div>
+</div>
+
+<div class="vbox output_wrapper">
+<div class="output vbox">
+
+
+<div class="hbox output_area"><div class="prompt"></div>
+<div class="box-flex1 output_subarea output_stream output_stdout">
+<pre>
+[u&apos;DL&apos;, u&apos;WN&apos;, u&apos;AA&apos;, u&apos;US&apos;, u&apos;UA&apos;]
+74883886
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we gather the relevant data into .csv files. For each airport we care about, we will find all flights originating there, and get the year, month, departure delay, cancellation status, and cancellation code for each flight.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[70]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c">#writes the necessary csvs for airports</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT Origin, Year, Month, DepDelay, Cancelled, CancellationCode FROM ontime WHERE (Origin = ?)&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">airport_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],))</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&quot;../data/raw/</span><span class="si">%s</span><span class="s">.csv&quot;</span> <span class="o">%</span> <span class="n">airport_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s">&quot;w&quot;</span><span class="p">))</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">cur</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Same as above, except for the airlines rather than airports.</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[71]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="c">#writes the necessary csvs for airlines</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="n">cur</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s">&#39;SELECT UniqueCarrier, Year, Month, DepDelay, Cancelled, CancellationCode FROM ontime WHERE (UniqueCarrier = ?)&#39;</span><span class="p">,</span> <span class="p">(</span><span class="n">airline_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],))</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s">&quot;../data/raw/</span><span class="si">%s</span><span class="s">.csv&quot;</span> <span class="o">%</span> <span class="n">airline_flights</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s">&quot;w&quot;</span><span class="p">))</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">cur</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Note that while we have saved these files into the cleaned folder, they aren't completely cleaned yet. See next notebook.</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
