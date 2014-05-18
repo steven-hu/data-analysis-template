@@ -1719,17 +1719,17 @@ init_mathjax();
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Cleaning"/>
-            <meta property="og:url" content="http://steven-hu.github.io/sun-and-shield-project/nb2.html"/>
+            <meta property="og:url" content="http://steven-hu.github.io/data-analysis-template/nb2.html"/>
             <meta property="og:description" content="Team members responsible for this notebook: Steven Hu: Writeup, code for cleaning Bob Shao: Deciding what/how to clean Connie Fee: Deciding what/how to clean Data Cleaning¶ In [2]: %load_ext rmagic We've already done a lot of the organizing of the data we want when we pulled the ..."/>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://steven-hu.github.io/sun-and-shield-project/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://steven-hu.github.io/sun-and-shield-project/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://steven-hu.github.io/data-analysis-template/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://steven-hu.github.io/data-analysis-template/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://steven-hu.github.io/sun-and-shield-project/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://steven-hu.github.io/sun-and-shield-project/theme/css/style.css" type="text/css"/>
+    <link href="http://steven-hu.github.io/data-analysis-template/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://steven-hu.github.io/data-analysis-template/theme/css/style.css" type="text/css"/>
 
-        <link href="http://steven-hu.github.io/sun-and-shield-project/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="http://steven-hu.github.io/data-analysis-template/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Data Analysis Project ATOM Feed"/>
 
     
@@ -1766,7 +1766,7 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://steven-hu.github.io/sun-and-shield-project/" class="navbar-brand">
+            <a href="http://steven-hu.github.io/data-analysis-template/" class="navbar-brand">
 Data Analysis Project            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -1777,7 +1777,7 @@ Data Analysis Project            </a>
                     <li><a href="nb1">Data Gathering</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://steven-hu.github.io/sun-and-shield-project/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
+                <li><a href="http://steven-hu.github.io/data-analysis-template/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -1792,7 +1792,7 @@ Data Analysis Project            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://steven-hu.github.io/sun-and-shield-project/nb2.html"
+                    <a href="http://steven-hu.github.io/data-analysis-template/nb2.html"
                        rel="bookmark"
                        title="Permalink to Data Cleaning">
                         Data Cleaning
@@ -2876,6 +2876,40 @@ In&nbsp;[10]:
 </div>
 
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>For our later convenience, we will concatenate these CSVs into one file, data.csv:</p>
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[1]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="n">airports</span> <span class="o">=</span> <span class="p">[</span><span class="s">u&#39;ORD&#39;</span><span class="p">,</span> <span class="s">u&#39;ATL&#39;</span><span class="p">,</span> <span class="s">u&#39;DFW&#39;</span><span class="p">,</span> <span class="s">u&#39;LAX&#39;</span><span class="p">,</span> <span class="s">u&#39;PHX&#39;</span><span class="p">,</span> <span class="s">u&#39;DEN&#39;</span><span class="p">,</span> <span class="s">u&#39;DTW&#39;</span><span class="p">,</span> <span class="s">u&#39;IAH&#39;</span><span class="p">,</span> <span class="s">u&#39;MSP&#39;</span><span class="p">,</span> <span class="s">u&#39;SFO&#39;</span><span class="p">,</span> <span class="s">u&#39;STL&#39;</span><span class="p">,</span> <span class="s">u&#39;EWR&#39;</span><span class="p">,</span> <span class="s">u&#39;LAS&#39;</span><span class="p">,</span> <span class="s">u&#39;CLT&#39;</span><span class="p">,</span> <span class="s">u&#39;LGA&#39;</span><span class="p">,</span> <span class="s">u&#39;BOS&#39;</span><span class="p">,</span> <span class="s">u&#39;PHL&#39;</span><span class="p">,</span> <span class="s">u&#39;PIT&#39;</span><span class="p">,</span> <span class="s">u&#39;SLC&#39;</span><span class="p">,</span> <span class="s">u&#39;SEA&#39;</span><span class="p">]</span>
+<span class="n">output</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;../data/cleaned/data.csv&quot;</span><span class="p">,</span> <span class="s">&quot;a&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">airports</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="s">&quot;../data/cleaned/</span><span class="si">%s</span><span class="s">.csv&quot;</span> <span class="o">%</span> <span class="n">i</span><span class="p">):</span>
+         <span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>    
+<span class="n">output</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell vbox">
+<div class="input hbox">
+<div class="prompt input_prompt">
+In&nbsp;[2]:
+</div>
+<div class="input_area box-flex1">
+<div class="highlight-ipynb"><pre class="ipynb">
+</pre></div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
 <div class="prompt input_prompt">
@@ -2901,7 +2935,7 @@ In&nbsp;[]:
     <section>
         <ul class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="https://github.com/steven-hu/sun-and-shield-project"><i
+                    <li class="list-group-item"><a href="https://github.com/steven-hu/data-analysis-template"><i
                             class="fa fa-view on github-square fa-lg"></i>View on Github
                     </a></li>
 
@@ -2954,10 +2988,10 @@ In&nbsp;[]:
 <script src="http://code.jquery.com/jquery.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://steven-hu.github.io/sun-and-shield-project/theme/js/bootstrap.min.js"></script>
+<script src="http://steven-hu.github.io/data-analysis-template/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://steven-hu.github.io/sun-and-shield-project/theme/js/respond.min.js"></script>
+<script src="http://steven-hu.github.io/data-analysis-template/theme/js/respond.min.js"></script>
 
 </body>
 </html>
