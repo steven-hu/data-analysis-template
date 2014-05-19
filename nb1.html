@@ -1611,11 +1611,11 @@ h1:hover .anchor-link,h2:hover .anchor-link,h3:hover .anchor-link,h4:hover .anch
 .highlight-ipynb .gr { color: #FF0000 } /* Generic.Error */
 .highlight-ipynb .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight-ipynb .gi { color: #00A000 } /* Generic.Inserted */
-.highlight-ipynb .go { color: #888888 } /* Generic.Output */
+.highlight-ipynb .go { color: #808080 } /* Generic.Output */
 .highlight-ipynb .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
 .highlight-ipynb .gs { font-weight: bold } /* Generic.Strong */
 .highlight-ipynb .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
-.highlight-ipynb .gt { color: #0044DD } /* Generic.Traceback */
+.highlight-ipynb .gt { color: #0040D0 } /* Generic.Traceback */
 .highlight-ipynb .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
 .highlight-ipynb .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
 .highlight-ipynb .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
@@ -1719,17 +1719,17 @@ init_mathjax();
     <!-- Open Graph tags -->
             <meta property="og:type" content="article"/>
             <meta property="og:title" content="Data Gathering"/>
-            <meta property="og:url" content="http://steven-hu.github.io/sun-and-shield-project/nb1.html"/>
-            <meta property="og:description" content="Team members responsible for this notebook: Steven Hu: Writing up, creating database, bash script, code to interface with database Bob Shao: Assisting with creating database Data Gathering¶ Creating Directory Structure¶ In [6]: %%bash mkdir ../script ../data ../data/raw ../data/cleaned ../data/simulated ../visualizations ls -r README.md NB4_project_report.ipynb NB3_data_analysis ..."/>
+            <meta property="og:url" content="http://steven-hu.github.io/data-analysis-template/nb1.html"/>
+            <meta property="og:description" content="Team members responsible for this notebook: Steven Hu: Writing up, creating database, bash script, code to interface with database Bob Shao: Assisting with creating database Description of the Data¶ We pulled flight data from 1987 to 2008 from http://stat-computing.org/dataexpo/2009/the-data.html, downloading all 20 years. The ..."/>
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://steven-hu.github.io/sun-and-shield-project/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://steven-hu.github.io/sun-and-shield-project/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://steven-hu.github.io/data-analysis-template/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://steven-hu.github.io/data-analysis-template/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://steven-hu.github.io/sun-and-shield-project/theme/css/pygments.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://steven-hu.github.io/sun-and-shield-project/theme/css/style.css" type="text/css"/>
+    <link href="http://steven-hu.github.io/data-analysis-template/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://steven-hu.github.io/data-analysis-template/theme/css/style.css" type="text/css"/>
 
-        <link href="http://steven-hu.github.io/sun-and-shield-project/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+        <link href="http://steven-hu.github.io/data-analysis-template/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
               title="Data Analysis Project ATOM Feed"/>
 
     
@@ -1766,7 +1766,7 @@ init_mathjax();
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://steven-hu.github.io/sun-and-shield-project/" class="navbar-brand">
+            <a href="http://steven-hu.github.io/data-analysis-template/" class="navbar-brand">
 Data Analysis Project            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -1777,7 +1777,7 @@ Data Analysis Project            </a>
                     <li><a href="nb1">Data Gathering</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://steven-hu.github.io/sun-and-shield-project/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
+                <li><a href="http://steven-hu.github.io/data-analysis-template/archives.html"><i class="fa fa-th-list"></i>Archives</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -1792,7 +1792,7 @@ Data Analysis Project            </a>
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://steven-hu.github.io/sun-and-shield-project/nb1.html"
+                    <a href="http://steven-hu.github.io/data-analysis-template/nb1.html"
                        rel="bookmark"
                        title="Permalink to Data Gathering">
                         Data Gathering
@@ -1822,9 +1822,33 @@ Data Analysis Project            </a>
 </ul>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Data-Gathering">Data Gathering<a class="anchor-link" href="#Data-Gathering">&#182;</a></h1>
+<h3 id="Description-of-the-Data">Description of the Data<a class="anchor-link" href="#Description-of-the-Data">&#182;</a></h3>
 </div>
 
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We pulled flight data from 1987 to 2008 from http://stat-computing.org/dataexpo/2009/the-data.html, downloading all 20 years. The data came in archived/compressed .csv files (comma-separated variables).</p>
+</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The files contain data on domestic US flights from 1987 to 2008. The data from all years combined consist of over 100 million rows and 29 columns. Each row represents a flight. The columns include (but are not limited to) the following information:</p>
+<ul>
+<li>Year</li>
+<li>Month</li>
+<li>Day of Month</li>
+<li>Day of Week</li>
+<li>Scheduled Departure Time</li>
+<li>Actual Departure Time</li>
+<li>Scheduled Arrival Time</li>
+<li>Actual Arrival Time</li>
+<li>Scheduled Flight Time</li>
+<li>Actual Flight Time</li>
+<li>Departure Delay</li>
+<li>Arrival Delay</li>
+<li>Airport of Origin</li>
+<li>Destination Airport</li>
+<li>Flight Distance</li>
+<li>Flight Number</li>
+</ul>
+</div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Creating-Directory-Structure">Creating Directory Structure<a class="anchor-link" href="#Creating-Directory-Structure">&#182;</a></h3>
 </div>
@@ -1863,34 +1887,6 @@ NB1_data_gathering.ipynb
 </div>
 </div>
 
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Description-of-the-Data">Description of the Data<a class="anchor-link" href="#Description-of-the-Data">&#182;</a></h3>
-</div>
-
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>We pulled flight data from 1987 to 2008 from http://stat-computing.org/dataexpo/2009/the-data.html, downloading all 20 years. The data came in archived/compressed .csv files (comma-separated variables).</p>
-</div>
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The files contain data on domestic US flights from 1987 to 2008. The data from all years combined consist of over 100 million rows and 29 columns. Each row represents a flight. The columns include (but are not limited to) the following information:</p>
-<ul>
-<li>Year</li>
-<li>Month</li>
-<li>Day of Month</li>
-<li>Day of Week</li>
-<li>Scheduled Departure Time</li>
-<li>Actual Departure Time</li>
-<li>Scheduled Arrival Time</li>
-<li>Actual Arrival Time</li>
-<li>Scheduled Flight Time</li>
-<li>Actual Flight Time</li>
-<li>Departure Delay</li>
-<li>Arrival Delay</li>
-<li>Airport of Origin</li>
-<li>Destination Airport</li>
-<li>Flight Distance</li>
-<li>Flight Number</li>
-</ul>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Downloading-the-Data">Downloading the Data<a class="anchor-link" href="#Downloading-the-Data">&#182;</a></h3>
@@ -1992,6 +1988,7 @@ In&nbsp;[69]:
 
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Due to the large size of the raw data, we could not work with it directly in iPython Notebook. Instead, we turned to SQLite to construct an SQL database.</p>
+<p>There's a bash script above that should do it if you run from iPython Notebook, but be warned that it will take a very long time. Below is an explanation.</p>
 </div>
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Start sqlite3, create database</strong> <br>$ sqlite3 ontime.sqlite3</p>
@@ -2008,7 +2005,7 @@ In&nbsp;[69]:
 </div>
 
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We don't want to look at all of the data, since it's not all relevant to our interests. We will narrow it down to fit the scope of our investigation. First of all, we are interested in classifying flights by their airport of origin. And we will look at the 20 airports with the most originating flights. So we produce a list of those airports as follows:</p>
+<p>We don't want to look at all of the data, with its myriad columns, since it's not all relevant to our interests. We will narrow it down to fit the scope of our investigation. First of all, we are interested in classifying flights by their airport of origin. And we will look at the 20 airports with the most originating flights. So we produce a list of those airports as follows:</p>
 </div>
 <div class="cell border-box-sizing code_cell vbox">
 <div class="input hbox">
@@ -2215,7 +2212,7 @@ In&nbsp;[]:
     <section>
         <ul class="list-group list-group-flush">
                 <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i>Social</h4></li>
-                    <li class="list-group-item"><a href="https://github.com/steven-hu/sun-and-shield-project"><i
+                    <li class="list-group-item"><a href="https://github.com/steven-hu/data-analysis-template"><i
                             class="fa fa-view on github-square fa-lg"></i>View on Github
                     </a></li>
 
@@ -2268,10 +2265,10 @@ In&nbsp;[]:
 <script src="http://code.jquery.com/jquery.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://steven-hu.github.io/sun-and-shield-project/theme/js/bootstrap.min.js"></script>
+<script src="http://steven-hu.github.io/data-analysis-template/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://steven-hu.github.io/sun-and-shield-project/theme/js/respond.min.js"></script>
+<script src="http://steven-hu.github.io/data-analysis-template/theme/js/respond.min.js"></script>
 
 </body>
 </html>
