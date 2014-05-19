@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Data Analysis Project</title><link href="http://steven-hu.github.io/data-analysis-template/" rel="alternate"></link><link href="http://steven-hu.github.io/data-analysis-template/feeds/misc.atom.xml" rel="self"></link><id>http://steven-hu.github.io/data-analysis-template/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="http://steven-hu.github.io/data-analysis-template/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/data-analysis-template,2014-03-04:nb4.html</id><summary type="html">&lt;p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Data Analysis Project</title><link href="http://steven-hu.github.io/sun-and-shield-project/" rel="alternate"></link><link href="http://steven-hu.github.io/sun-and-shield-project/feeds/misc.atom.xml" rel="self"></link><id>http://steven-hu.github.io/sun-and-shield-project/</id><updated>2014-03-04T00:00:00-08:00</updated><entry><title>Project Report</title><link href="http://steven-hu.github.io/sun-and-shield-project/nb4.html" rel="alternate"></link><updated>2014-03-04T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/sun-and-shield-project,2014-03-04:nb4.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h1 id="Twenty-Years-of-Flight-Delays-in-the-United-States"&gt;Twenty Years of Flight Delays in the United States&lt;a class="anchor-link" href="#Twenty-Years-of-Flight-Delays-in-the-United-States"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
@@ -8830,7 +8830,7 @@ NC0wNS0xOFQyMzowNTo0NS0wNzowMLrLNBsAAAAASUVORK5CYII=
 &lt;p&gt;&lt;em&gt;Jonathan Chen&lt;/em&gt; is pursuing a double major in statistics and economics at UC Berkeley. He enjoys running, playing volleyball, and practicing guitar in his free time. Contact: jonathanchen@berkeley.edu&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Bob Shao&lt;/em&gt; is a double major in statistics and economics at UC Berkeley. He is nationally ranked in chess and likes playing soccer and other sports. Contact: bobshao@berkeley.edu&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Steven Hu&lt;/em&gt; is a statistics major at UC Berkeley. Contact: stevenhu03@berkeley.edu&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="http://steven-hu.github.io/data-analysis-template/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/data-analysis-template,2014-03-03:nb3.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Analysis</title><link href="http://steven-hu.github.io/sun-and-shield-project/nb3.html" rel="alternate"></link><updated>2014-03-03T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/sun-and-shield-project,2014-03-03:nb3.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
@@ -17475,7 +17475,7 @@ Number of Fisher Scoring iterations: 2
 &lt;/div&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Thus, we can see time is a significant factor on effect of log-odds success on proportions of flights delayed. There is a significant &lt;strong&gt;decrease&lt;/strong&gt; (since the slope from the coefficients, years, is estimated to be negative from above, and the p-value is significant (p=.00575&amp;lt;.01)) in proportion of flights delayed over time. Once again, this is very interesting because we previously saw from the graph above the average length of delays has &lt;strong&gt;increased&lt;/strong&gt; over time. Overall, there appear to be fewer delays but the delays are getting longer over time.&lt;/p&gt;
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="http://steven-hu.github.io/data-analysis-template/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/data-analysis-template,2014-03-02:nb2.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Cleaning</title><link href="http://steven-hu.github.io/sun-and-shield-project/nb2.html" rel="alternate"></link><updated>2014-03-02T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/sun-and-shield-project,2014-03-02:nb2.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
@@ -18582,7 +18582,7 @@ In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="http://steven-hu.github.io/data-analysis-template/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/data-analysis-template,2014-03-01:nb1.html</id><summary type="html">&lt;p&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Data Gathering</title><link href="http://steven-hu.github.io/sun-and-shield-project/nb1.html" rel="alternate"></link><updated>2014-03-01T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/sun-and-shield-project,2014-03-01:nb1.html</id><summary type="html">&lt;p&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;h2 id="team-members-responsible-for-this-notebook"&gt;Team members responsible for this notebook:&lt;/h2&gt;
 &lt;ul&gt;
@@ -18968,6 +18968,6 @@ In&amp;nbsp;[]:
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Reproducibility</title><link href="http://steven-hu.github.io/data-analysis-template/reproducibility.html" rel="alternate"></link><updated>2014-02-28T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/data-analysis-template,2014-02-28:reproducibility.html</id><summary type="html">&lt;h1&gt;Reproducibility&lt;/h1&gt;
+&lt;/div&gt;&lt;/p&gt;</summary></entry><entry><title>Reproducibility</title><link href="http://steven-hu.github.io/sun-and-shield-project/reproducibility.html" rel="alternate"></link><updated>2014-02-28T00:00:00-08:00</updated><author><name>Benoit Dherin</name></author><id>tag:steven-hu.github.io/sun-and-shield-project,2014-02-28:reproducibility.html</id><summary type="html">&lt;h1&gt;Reproducibility&lt;/h1&gt;
 &lt;h2&gt;Virtual OskiBox&lt;/h2&gt;
 &lt;h2&gt;Software Requirements&lt;/h2&gt;</summary></entry></feed>
